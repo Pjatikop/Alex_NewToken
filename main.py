@@ -243,3 +243,5 @@
 # print([i for i in range(5)])
 
 print("ASD")
+a = 10
+print(a)
