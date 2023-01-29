@@ -242,6 +242,68 @@
 
 # print([i for i in range(5)])
 
-print("ASD")
-a = 10
-print(a)
+# print("ASD")
+# a = 10
+# print(a)
+
+# from random import shuffle
+# matrix = [[1, 2, 3, 4],
+#           [5, 6, 7, 8],
+#           [9, 10, 11, 12],
+#           [13, 14, 15, 16]]
+#
+# matrix1 = [j for i in range(len(matrix)) for j in matrix[i]]
+# shuffle(matrix1)
+# matrix = [[matrix1.pop(0) for _ in range(4)] for _ in range(4)]
+# print(matrix)
+
+# from random import randint
+# n = 7
+# res = set()
+# while len(res) < 100:
+#     num = [str(randint(0, 9)) for _ in range(n)]
+#     if num[0] != '0':
+#         res.add(''.join(num))
+# print(*res, sep='\n')
+
+# from random import shuffle
+#
+# word = list(input())
+# shuffle(word)
+# print(*word, sep='')
+
+# from random import randint
+#
+# def print_matrix(mat, n, width=3):
+#     for r in range(n):
+#         for c in range(n):
+#             print(str(mat[r][c]).ljust(width), end=' ')
+#         print()
+#
+#
+# l = 5
+# p = set()
+# while len(p) < l ** 2:
+#     p.add(randint(1, 75))
+# lst = list(p)
+# matrix = [[lst.pop(0) for _ in range(l)] for _ in range(l)]
+# matrix[l // 2][l //2] = 0
+# print_matrix(matrix, l)
+#------------------------------------------------------------------------------------------------
+
+# from random import shuffle
+#
+# n = int(input())
+# inp1 = [input() for _ in range(n)]
+# inp2 = inp1.copy()
+# k = 0
+# while k != n:
+#     k = 0
+#     shuffle(inp2)
+#     for i in range(len(inp1)):
+#         if inp1[i] != inp2[i]:
+#             k += 1
+#
+# print(*[inp1[i] + " - " + inp2[i] for i in range(len(inp1))], sep="\n")
+
+#------------------------------------------------------------------------------------------------------------
