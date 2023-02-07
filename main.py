@@ -308,6 +308,19 @@
 
 #------------------------------------------------------------------------------------------------------------
 
+# import turtle
+#
+# def star(side):
+#     turtle.showturtle()
+#     turtle.right(60)
+#     for j in range(10):
+#         for i in range(4):
+#             turtle.forward(side)
+#             turtle.left(60 + (i % 2) * 60)
+#         turtle.left(35)
+#
+#
+# star(100)
 
-
+s = input("Введите дату в формате: ")
 
