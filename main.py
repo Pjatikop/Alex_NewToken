@@ -339,4 +339,50 @@
 #         count += 1
 
 # print(count)
+from random import randint
+import time
+# def bubble(array):
+#     for i in range(len(array) - 1):
+#         for j in range(len(array) - i - 1):
+#             if array[j] > array[j + 1]:
+#                 array[j], array[j + 1] = array[j + 1], array[j]
+# lst = [randint(1, 99) for i in range(10000)]
+# start = time.monotonic()
+# bubble(lst)
+# res = time.monotonic() - start
+# print(round(res, 3), 'sec')
+
+
+# def merge_sort(a):
+#     n = len(a)
+#     if n < 2:
+#         return a
+#
+#     left = merge_sort(a[:n // 2])
+#     right = merge_sort(a[n // 2: n])
+#
+#     i = j = 0
+#     res = []
+#
+#     while i < len(left) or j < len(right):
+#         if not i < len(left):
+#             res.append(right[j])
+#             j += 1
+#         elif not j < len(right):
+#             res.append(left[i])
+#             i += 1
+#         elif left[i] < right[j]:
+#             res.append(left[i])
+#             i += 1
+#         else:
+#             res.append(right[j])
+#             j += 1
+#         return res
+#
+# array = [randint(1, 99) for i in range(10000)]
+#
+# start = time.monotonic()
+# array = merge_sort(array)
+# res = time.monotonic() - start
+# print(round(res, 3), 'sec')
 
