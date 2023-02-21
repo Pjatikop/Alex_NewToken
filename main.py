@@ -385,4 +385,3 @@ import time
 # array = merge_sort(array)
 # res = time.monotonic() - start
 # print(round(res, 3), 'sec')
-
