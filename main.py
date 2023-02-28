@@ -341,6 +341,8 @@
 # print(count)
 from random import randint
 import time
+
+
 # def bubble(array):
 #     for i in range(len(array) - 1):
 #         for j in range(len(array) - i - 1):
@@ -387,32 +389,60 @@ import time
 # print(round(res, 3), 'sec')
 
 
-class Person:
-    def __init__(self, name, old):
-        self.__name = name
-        self.__old = old
+# class Person:
+#     def __init__(self, name, old):
+#         self.__name = name
+#         self.__old = old
+#
+#     @property
+#     def name(self):
+#         return self.__name
+#
+#     @name.setter
+#     def name(self, name):
+#         self.__name = name
+#
+#     @property
+#     def old(self):
+#         return self.__old
+#
+#     @old.setter
+#     def old(self, old):
+#         self.__old = old
+#
+#
+# p1 = Person("Irina", 26)
+# print(p1.__dict__)
+# p1.name = "Igor"
+# print(p1.name)
+# p1.old = 31
+# # del p1.old
+# print(p1.__dict__)
 
-    @property
-    def name(self):
-        return self.__name
 
-    @name.setter
-    def name(self, name):
-        self.__name = name
+# class Counter:
+#     @staticmethod
+#     def max_counter(a, b, c, d):
+#         return max(a, b, c, d)
+#
+#     @staticmethod
+#     def min_counter(a, b, c, d):
+#         return min(a, b, c, d)
+#
+#     @staticmethod
+#     def q_counter(*args):
+#         return sum(args) / len(args)
+#
+#     @staticmethod
+#     def f_counter(x):
+#         count = 1
+#         for i in range(1, x + 1):
+#             count *= i
+#         return count
+#
+#
+# print(Counter.max_counter(3, 5, 7, 9))
+# print(Counter.min_counter(3, 5, 7, 9))
+# print(Counter.q_counter(3, 5, 7, 9))
+# print(Counter.f_counter(5))
 
-    @property
-    def old(self):
-        return self.__old
-
-    @old.setter
-    def old(self, old):
-        self.__old = old
-
-
-p1 = Person("Irina", 26)
-print(p1.__dict__)
-p1.name = "Igor"
-print(p1.name)
-p1.old = 31
-# del p1.old
-print(p1.__dict__)
