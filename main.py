@@ -5454,3 +5454,43 @@ import math
 #
 # inner2 = outer.inner.inner_inner
 # inner2.show()
+
+
+# class Cat:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def info(self):
+#         print(f"Я кот. Меня зовут {self.name}. Мой возраст {self.age}")
+#
+#     def make_sound(self):
+#         print(f"{self.name} мяукаетю")
+#
+#
+# class Dog:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def info(self):
+#         return f"Я собака. Меня зовут {self.name}. Мой возраст {self.age}"
+#
+#     def make_sound(self):
+#         return f"{self.name} гавкает"
+#
+#
+# p = [Cat('Пушок', 2.5), Dog('Барбос', 3)]
+#
+# for i in p:
+#     print(i.info())
+#     print(i.make_sound())
+
+# group = [    Student("Батодалаев", "Даши", 16, "ГК", "Web_011", 5),
+#              Student("Загидуллин", "Линар", 32, "РПО", "PD_011", 5),
+#              Graduate("Шугани", "Сергей", 15, "РПО", "PD_011", 5, "Защита персональных данных"),
+#              Teacher("Даньшин", "Андрей", 38, "Астрофизика", 110),
+#              Student("Маркин", "Даниил", 17, "ГК", "Python_011", 5),
+#              Teacher("Башкиров", "Алексей", 45, "Разработка приложений", 20)]
+#
+# for i in group:    i.info()
