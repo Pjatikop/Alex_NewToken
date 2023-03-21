@@ -5494,3 +5494,36 @@ import math
 #              Teacher("Башкиров", "Алексей", 45, "Разработка приложений", 20)]
 #
 # for i in group:    i.info()
+
+# class Power:
+#     def __init__(self, func):
+#         self.func = func
+#
+#     def __call__(self, a, b):
+#         return self.func(a, b) ** 2
+#
+#
+# @Power
+# def func(a, b):
+#     return a * b
+#
+#
+# print(func(2, 3))
+
+# class Power:
+#     def __init__(self, arg):
+#         self.arg = arg
+#
+#     def __call__(self, func):
+#         def wrap(a, b):
+#             print(func(a, b) ** self.arg)
+#         return wrap
+#
+#
+# @Power(2)
+# def func(a, b):
+#     return a * b
+#
+#
+# func(2, 3)
+
