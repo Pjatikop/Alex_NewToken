@@ -5563,3 +5563,48 @@ import math
 #
 # p1 = carclass.CarClass('Tesla', 'T', 2018, 99000)
 # p1.show_car()
+
+
+# class Student:
+#     def __init__(self, name, marks):
+#         self.name = name
+#         self.marks = marks
+#
+#     def __str__(self):
+#         return f"Студент: {self.name}: {', '.join(map(str, self.marks))}"
+#
+#     def add_mark(self, mark):
+#         self.marks.append(mark)
+#
+#     def delete_mark(self, index):
+#         self.marks.pop(index)
+#
+#     def edit_marks(self, index, new_mark):
+#         self.marks[index] = new_mark
+#
+#     def average_mark(self):
+#         return round((sum(self.marks) / len(self.marks)), 2)
+#
+#
+#
+# class Group:
+#     def __init__(self, students):
+#         self.students = students
+#
+#     def __str__(self):
+#
+#         return f"Студент: {self.name}: {', '.join(map(str, self.marks))}"
+#
+#
+# st1 = Student('Bodnya', [5, 4, 3, 4, 5, 3])
+# st2 = Student('Nikilaenko', [2, 5, 3, 4, 1, 1])
+# st3 = Student('Birukov', [5, 4, 4, 5, 5, 5])
+#
+# sts = [st1, st2]
+
+# import requests
+# import json
+#
+# response = requests.get('https://jsonplaceholder.typicode.com/todos')
+# todos = json.loads(response.text)
+# print(todos)
