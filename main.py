@@ -5608,3 +5608,15 @@ import math
 # response = requests.get('https://jsonplaceholder.typicode.com/todos')
 # todos = json.loads(response.text)
 # print(todos)
+
+
+# import csv
+#
+# with open("data.csv") as f:
+#     file_reader = csv.reader(f, delimiter=';')
+#     count = 0
+#
+#     for row in file_reader:
+#         if count == 0:
+#             print(f'Файл содержит столбцы: {''}')
+#         print(row)
