@@ -5,7 +5,7 @@
 # print(id(age))
 # age = "hello"
 # print(type(age))
-
+import csv
 # a = b = c = 1
 # print(a, b, c)
 
@@ -5620,3 +5620,63 @@ import math
 #         if count == 0:
 #             print(f'Файл содержит столбцы: {''}')
 #         print(row)
+
+
+
+# data = [['hostname', 'vendor', 'model', 'location'],
+#         ['sw1', 'Cisco', '3750', 'London, Best str'],
+#         ['sw2', 'Cisco', '3850', 'Liverpool, Better str'],
+#         ['sw3', 'Cisco', '3650', 'Liverpool, Better str'],
+#         ['sw4', 'Cisco', '3650', 'London, Best str']]
+#
+# with open("sw_data.csv") as f:
+#     writer = csv.writer(f, delimiter=';', lineterminator='\r')
+
+
+from bs4 import BeautifulSoup
+import re
+
+# f = open('index.html').read()
+# soup = BeautifulSoup(f, 'html.parser')
+# row = soup.find_all('div', class_='name')
+# row = soup.find_all('div', class_='row')[1].find(class_='name')
+# row = soup.find_all('div', {'data-set': "salary"})
+# row = soup.find('div', string='Alena').parent
+# row = soup.find('div', string='Alena').find_parent(class_='row')
+# row = soup.find('div', id='whois3').find_previous_sibling()
+# print(row)
+
+# def get_copywriter(tag):
+#     whois = tag.find('div', class_="whois")
+#     if 'Copywriter' in whois:
+#         return tag
+#     return  None
+#
+#
+# f = open('index.html', encoding='utf-8').read()
+# soup = BeautifulSoup(f, 'html.parser')
+# copywriter = []
+# row = soup.find_all('div', class_='row')
+# for i in row:
+#     cw = get_copywriter(i)
+#     if cw:
+#         copywriter.append(cw)
+#
+# print(copywriter)
+
+# def get_salary(s):
+#     pattern = r''
+#     res = re.findall(pattern, s)
+#
+# f = open('index.html', encoding='utf-8').read()
+# soup = BeautifulSoup(f, 'html.parser')
+# row = soup.find_all('div', {'data-set': "salary"})
+# for i in row:
+#     print(i.text)
+
+
+import requests
+
+# res = requests.get('https://ru.wordpress.org/')
+# print(res)
+
