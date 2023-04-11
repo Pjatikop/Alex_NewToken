@@ -22,7 +22,6 @@
 #     main()
 
 
-
 # from parse import Parser
 #
 #
@@ -81,3 +80,15 @@
 # if __name__ == '__main__':
 #     run()
 
+# d = {
+#     'a': 45,
+#     'b': 2,
+#     'c': 17,
+#     'd': 3000
+# }
+#
+# def max_zn(obj):
+#     l = dict(sorted(obj.items(), key=lambda x: x[1], reverse=True))
+#     return list(l.keys())[:2]
+#
+# print(*max_zn(d))
