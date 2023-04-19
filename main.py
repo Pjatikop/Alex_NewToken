@@ -94,20 +94,43 @@
 # print(*max_zn(d))
 
 
+# import sqlite3
+#
+# # con = sqlite3.connect('profile.db')
+# # cur = con.cursor()
+# #
+# # con.close()
+#
+# with sqlite3.connect('profile.db') as con:
+#     cur = con.cursor()
+#     # cur.execute("""CREATE TABLE IF NOT EXISTS users(
+#     # id INTEGER PRIMARY KEY AUTOINCREMENT,
+#     # name TEXT NOT NULL,
+#     # summa REAL,
+#     # data TEXT
+#     # )""")
+#     cur.execute('DROP TABLE users')
+
+#
+
 import sqlite3
 
-# con = sqlite3.connect('profile.db')
-# cur = con.cursor()
-#
-# con.close()
-
-with sqlite3.connect('profile.db') as con:
+with sqlite3.connect('db_4.db') as con:
     cur = con.cursor()
-    # cur.execute("""CREATE TABLE IF NOT EXISTS users(
-    # id INTEGER PRIMARY KEY AUTOINCREMENT,
-    # name TEXT NOT NULL,
-    # summa REAL,
-    # data TEXT
-    # )""")
-    cur.execute('DROP TABLE users')
-    
+
+    cur.execute("""
+    SELECT *
+    FROM Ware
+    ORDER BY Price DESC
+    LIMIT 2, 5
+    """)
+
+    # res = cur.fetchall()
+    # # print(res)
+    #
+    # for res in cur:
+    #     print(res)
+
+    res = cur.fetchone()
+    print(res)
+
