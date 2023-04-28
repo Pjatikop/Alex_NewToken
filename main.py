@@ -113,24 +113,54 @@
 
 #
 
+# import sqlite3
+
+# with sqlite3.connect('db_4.db') as con:
+#     cur = con.cursor()
+#
+#     cur.execute("""
+#     SELECT *
+#     FROM Ware
+#     ORDER BY Price DESC
+#     LIMIT 2, 5
+#     """)
+#
+#     # res = cur.fetchall()
+#     # # print(res)
+#     #
+#     # for res in cur:
+#     #     print(res)
+#
+#     res = cur.fetchone()
+#     print(res)
+
 import sqlite3
 
-with sqlite3.connect('db_4.db') as con:
+cars = [
+    ('BMW', 54000),
+    ('Chevrolet', 34000),
+    ('Daewo', 17000),
+    ('Lada', 4000),
+    ('Honda', 24000)
+     ]
+
+with sqlite3.connect('cars.db') as con:
     cur = con.cursor()
 
     cur.execute("""
-    SELECT *
-    FROM Ware
-    ORDER BY Price DESC
-    LIMIT 2, 5
+    CREATE TABLE IF NOT EXISTS cars(
+        car_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        model TEXT,
+        price INTEGER
+    )
     """)
 
-    # res = cur.fetchall()
-    # # print(res)
-    #
-    # for res in cur:
-    #     print(res)
+    for car in cars:
+        cur.execute("INSERT INTO cars VALUES(NULL, ?, ?)", car)
 
-    res = cur.fetchone()
-    print(res)
 
+    # cur.execute("INSERT INTO cars VALUES(1, 'Renault', 22000)")
+    # cur.execute("INSERT INTO cars VALUES(2, 'Volvo', 29000)")
+    # cur.execute("INSERT INTO cars VALUES(3, 'Mercedes', 57000)")
+    # cur.execute("INSERT INTO cars VALUES(4, 'Bently', 35000)")
+    # cur.execute("INSERT INTO cars VALUES(5, 'Audi', 52000)")
