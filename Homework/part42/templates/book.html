@@ -2,5 +2,5 @@
 
 {% block content %}
 {{ super() }}
-<h2>Содержимое главной страницы</h2>
+{{ post | safe }}
 {% endblock %}
