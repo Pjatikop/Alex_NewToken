@@ -29,7 +29,7 @@ class FDataBase:
                 print("Статья с таким URL уже существует")
                 return False
 
-            
+
 
             tm = math.floor(time.time())
             self.__cur.execute("INSERT INTO books VALUES(NULL, ?, ?, ?, ?)", (title, text, url, tm))

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="container">
+    <h1>Информация о сайте</h1>
+
+    <p>Данный сайт разработан для генерации паролей из случайных символов, состоящих из букв латинского
+    алфавита, арабских цифр и спец знаков. Количество символов в пароле может варьироваться от 6 до 15 знаков.</p>
+    <p>Разработчик: Пятикоп А.В.</p>
+    <p><a href="{% url 'home' %}"><input type="button" value="Вернуться на главную"></a></p>
+
+</div>
+</body>
+</html>
