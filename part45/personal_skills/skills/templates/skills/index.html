@@ -1,0 +1,23 @@
+{% extends 'skills/base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>Портфолио разработчика</h1>
+<div class="img">
+    <img src="{% static 'skills/Alex.jpg' %}" alt="" width=20% height=20%>
+</div>
+<h2>Владение программами:</h2>
+<div class="block">
+    {% for p in prog %}
+    <div class="element">
+        <div><img src="{{ p.image.url }}" alt="" width="407" height="229"></div>
+        <div class="text">
+        <h2><a href="{{ p.url }}" target="_blank">{{ p.title }}</a></h2>
+        <p>{{ p.description }}</p></div>
+    </div>
+    
+
+    {% endfor %}
+</div>
+
+{% endblock %}
