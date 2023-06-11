@@ -3,10 +3,18 @@
 {% block content %}
 
 <div class="detail">
-    <h1>{{ work.title }}</h1>
-    <h2>--{{ work.date|date:'j E Y' }}--</h2>
-    {{ work.description|safe }}
+<!--    <h1>{{ work.title }}</h1>-->
+    {{ error }}
+<!--    <h2>&#45;&#45;{{ work.date|date:'j E Y' }}&#45;&#45;</h2>-->
+<!--    {{ work.description|safe }}-->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn">Сохранить</button>
+    </form>
+
 </div>
+
 
 
 {% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'skills/base.html' %}
+
+{% block content %}
+
+<h1>Новая работа:</h1>
+
+<div>{{ error }}</div>
+
+<form method="post" class="bg">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="center"><button class="btn">Создать</button></div>
+
+
+</form>
+
+
+{% endblock %}

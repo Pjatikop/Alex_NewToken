@@ -4,22 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylep.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'skills/favicon1.ico' %}">
 </head>
 <body>
+
+{% if user.is_authenticated %}
     <div class="menu">
         <div class="wrap">
             <div class="logo">
                 <a href="{% url 'index' %}"><img src="{% static 'skills/logo3.png' %}" alt=""></a>
             </div>
             <ul>
+                <li class="logos">Пользователь: {{ user.username }}</li>
                 <li><a href="{% url 'index' %}">Главная</a></li>
                 <li><a href="{% url 'blogs' %}">Работы</a></li>
+                <li><a href="{% url 'createblog' %}">Создать работу</a></li>
                 <li><a href="{% static 'skills/resume.pdf' %}" target="_blank">Резюме</a></li>
+                <li>
+                    <form action="{% url 'logoutuser' %}" method="post">
+                    {% csrf_token %}
+                    <button class="tops">Выйти</button>
+                    </form>
+                </li>
             </ul>
         </div>
     </div>
+{% else %}
+    <div class="menu">
+        <div class="wrap">
+            <div class="logo">
+                <a href="{% url 'index' %}"><img src="{% static 'skills/logo3.png' %}" alt=""></a>
+            </div>
+            <ul>
+                <li><a href="{% url 'signupuser' %}">Зарегистрироваться</a></li>
+                <li><a href="{% url 'index' %}">Главная</a></li>
+                <li><a href="{% url 'blogs' %}">Работы</a></li>
+                <li><a href="{% url 'createblog' %}">Создать работу</a></li>
+                <li><a href="{% url 'loginuser' %}">Войти</a></li>
+            </ul>
+        </div>
+    </div>
+{% endif %}
 
     <div class="content">
       <div class="wrap">
